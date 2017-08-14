@@ -1,6 +1,6 @@
 let crypto = require('crypto')
 
-class md5Helper {
+class MD5Helper {
     /**
      * md5加密
      * 
@@ -24,4 +24,4 @@ class md5Helper {
     }
 }
 
-module.exports = md5Helper;
+module.exports = MD5Helper;

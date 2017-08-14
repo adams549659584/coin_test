@@ -8,17 +8,17 @@
 // okcoinApi.userinfo();
 // // okcoinApi.account_records();
 
-let HttpHelper = require('./helper/httpHelper')
+// let HttpHelper = require('./helper/httpHelper')
 
-let httpHelper = new HttpHelper('tstapp.360kad.com', 443);
-httpHelper.request('/Login', 'get').then((res, err) => {
-    console.log(res);
-})
+// let httpHelper = new HttpHelper('tstapp.360kad.com', 443);
+// httpHelper.request('/Login', 'get').then((res, err) => {
+//     console.log(res);
+// })
 
-let cacheHelper = require('./helper/cacheHelper')
-let cacheKey = 'test';
-cacheHelper.set(cacheKey, { a: 'ttttt', b: 1, c: false, d: true, e: { a: '111' } }, 2);
-let cacheInfo = cacheHelper.get(cacheKey);
-console.log(cacheInfo);
+// let cacheHelper = require('./helper/cacheHelper')
+// let cacheKey = 'test';
+// cacheHelper.set(cacheKey, { a: 'ttttt', b: 1, c: false, d: true, e: { a: '111' } }, 2);
+// let cacheInfo = cacheHelper.get(cacheKey);
+// console.log(cacheInfo);
 let Logger = require('./helper/logHelper')
-Logger.log('test')
+Logger.log('test', '/test/test/test/test/test/test.log')

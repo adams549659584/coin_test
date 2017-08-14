@@ -1,5 +1,6 @@
 let fs = require('fs')
 let path = require('path')
+let pathHelper = require('./pathHelper')
 let moment = require('moment')
 
 /**
@@ -40,18 +41,17 @@ function writeLog() {
     }
     TASK_IS_RUNING = true;
     let log = TASK_LOGS.shift();
-    let logPath = path.dirname(log.filename);
-    if (!fs.existsSync(logPath)) {
-        fs.mkdirSync(logPath);
-    }
-    fs.appendFile(log.filename, log.msg, 'utf8', function() {
-        if (TASK_LOGS.length > 0) {
-            TASK_IS_RUNING = false;
-            writeLog();
-        } else {
-            TASK_IS_RUNING = false;
-        }
-    });
+    let dirname = path.dirname(log.filename);
+    pathHelper.mkdirs(dirname, () => {
+        fs.appendFile(log.filename, log.msg, 'utf8', function() {
+            if (TASK_LOGS.length > 0) {
+                TASK_IS_RUNING = false;
+                writeLog();
+            } else {
+                TASK_IS_RUNING = false;
+            }
+        });
+    })
 }
 
 class Logger {

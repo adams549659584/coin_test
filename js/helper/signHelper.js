@@ -1,6 +1,6 @@
 let md5Helper = require('./md5Helper')
 
-class signHelper {
+class SignHelper {
     /**
      * 
      * 
@@ -8,7 +8,7 @@ class signHelper {
      * @param {string} secretkey 
      * @param {object} parameters 
      * @returns 
-     * @memberof signHelper
+     * @memberof SignHelper
      */
     static sign(secretkey, parameters) {
         let parameterArr = new Array();
@@ -26,4 +26,4 @@ class signHelper {
     }
 }
 
-module.exports = signHelper;
+module.exports = SignHelper;
