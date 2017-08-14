@@ -1,0 +1,23 @@
+{
+  "name": "coin_test",
+  "version": "1.0.0",
+  "description": "coin_test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adams549659584/coin_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adams549659584/coin_test/issues"
+  },
+  "homepage": "https://github.com/adams549659584/coin_test#readme",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "moment": "^2.18.1"
+  }
+}
